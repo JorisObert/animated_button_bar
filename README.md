@@ -25,19 +25,19 @@ And use an `AnimatedBarButton` like this:
   children: [
     ButtonBarEntry(
       onTap: ()=>print('First item tapped'),
-	  child: Text('Day')
+      child: Text('Day')
     ),
-	  ButtonBarEntry(
+    ButtonBarEntry(
       onTap: ()=>print('Second item tapped'),
-	  child: Text('Week')
+      child: Text('Week')
     ),
-	  ButtonBarEntry(
+    ButtonBarEntry(
       onTap: ()=>print('Third item tapped'),
-	  child: Text('Month')
+      child: Text('Month')
     ),
-	  ButtonBarEntry(
+    ButtonBarEntry(
       onTap: ()=>print('Fourth item tapped'),
-	  child: Text('Year')
+      child: Text('Year')
     )
   ],
 ),
