@@ -1,7 +1,5 @@
 # animated_button_bar
 
-# animated_button_bar
-
 AnimatedButtonBar is a flutter library that allows you to create a row of buttons with an animation on selection.
 
 ##  Getting started
