@@ -47,17 +47,20 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
 
   @override
   Widget build(BuildContext context) {
-    Color backgroundColor = widget.backgroundColor ?? Theme.of(context).backgroundColor;
+    Color backgroundColor =
+        widget.backgroundColor ?? Theme.of(context).backgroundColor;
     return Padding(
       padding: widget.padding,
-      child: LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+      child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
         return Card(
           color: backgroundColor,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(widget.radius)),
               side: BorderSide(
                 color: widget.borderColor ?? Colors.transparent,
-                width: widget.borderWidth ?? (widget.borderColor != null ? 1.0 : 0.0),
+                width: widget.borderWidth ??
+                    (widget.borderColor != null ? 1.0 : 0.0),
               )),
           elevation: widget.elevation,
           child: Stack(
@@ -67,13 +70,16 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
                 top: 0,
                 bottom: 0,
                 left: constraints.maxWidth / widget.children.length * _index,
-                right: (constraints.maxWidth / widget.children.length) * (widget.children.length - _index - 1),
+                right: (constraints.maxWidth / widget.children.length) *
+                    (widget.children.length - _index - 1),
                 duration: widget.animationDuration,
                 curve: widget.curve,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: widget.foregroundColor ?? Theme.of(context).accentColor,
-                    borderRadius: BorderRadius.all(Radius.circular(widget.radius)),
+                    color:
+                        widget.foregroundColor ?? Theme.of(context).accentColor,
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(widget.radius)),
                   ),
                 ),
               ),
@@ -94,13 +100,19 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
                                   _index = i;
                                 });
                               },
-                              borderRadius: BorderRadius.all(Radius.circular(widget.radius)),
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(widget.radius)),
                               child: Padding(
-                                padding: EdgeInsets.symmetric(vertical: widget.innerVerticalPadding),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: widget.innerVerticalPadding),
                                 child: Center(
                                     child: ColorFiltered(
                                         colorFilter: ColorFilter.mode(
-                                            backgroundColor, widget.invertedSelection && _index == i ? BlendMode.srcIn : BlendMode.dstIn),
+                                            backgroundColor,
+                                            widget.invertedSelection &&
+                                                    _index == i
+                                                ? BlendMode.srcIn
+                                                : BlendMode.dstIn),
                                         child: sideButton.child)),
                               ),
                             ),

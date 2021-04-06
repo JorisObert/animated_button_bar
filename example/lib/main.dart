@@ -36,10 +36,16 @@ class _SampleViewState extends State<SampleView> {
             padding: const EdgeInsets.all(16.0),
             invertedSelection: true,
             children: [
-              ButtonBarEntry(onTap: () => print('First item tapped'), child: Text('Day')),
-              ButtonBarEntry(onTap: () => print('Second item tapped'), child: Text('Week')),
-              ButtonBarEntry(onTap: () => print('Third item tapped'), child: Text('Month')),
-              ButtonBarEntry(onTap: () => print('Fourth item tapped'), child: Text('Year'))
+              ButtonBarEntry(
+                  onTap: () => print('First item tapped'), child: Text('Day')),
+              ButtonBarEntry(
+                  onTap: () => print('Second item tapped'),
+                  child: Text('Week')),
+              ButtonBarEntry(
+                  onTap: () => print('Third item tapped'),
+                  child: Text('Month')),
+              ButtonBarEntry(
+                  onTap: () => print('Fourth item tapped'), child: Text('Year'))
             ],
           ),
           //You can populate it with different types of widgets like Icon
@@ -53,8 +59,12 @@ class _SampleViewState extends State<SampleView> {
             borderWidth: 2,
             innerVerticalPadding: 16,
             children: [
-              ButtonBarEntry(onTap: () => print('First item tapped'), child: Icon(Icons.person)),
-              ButtonBarEntry(onTap: () => print('Second item tapped'), child: Icon(Icons.people)),
+              ButtonBarEntry(
+                  onTap: () => print('First item tapped'),
+                  child: Icon(Icons.person)),
+              ButtonBarEntry(
+                  onTap: () => print('Second item tapped'),
+                  child: Icon(Icons.people)),
             ],
           ),
         ],
