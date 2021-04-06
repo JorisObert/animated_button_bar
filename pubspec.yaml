@@ -1,7 +1,6 @@
 name: animated_button_bar
 description: A highly customizable button bar with animation on selected item.
 version: 0.0.2+1
-author: Joris Obert <klyridol01@gmail.com>
 homepage: https://github.com/JorisObert/animated_button_bar
 
 environment:

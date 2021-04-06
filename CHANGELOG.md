@@ -1,3 +1,7 @@
+## [0.0.2+1] - 2021-04-06
+
+* Dart code formatting
+
 ## [0.0.2] - 2021-04-06
 
 * Null safety
