@@ -23,6 +23,7 @@ class SampleView extends StatefulWidget {
 }
 
 class _SampleViewState extends State<SampleView> {
+  AnimatedButtonController _controller = AnimatedButtonController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,6 +68,30 @@ class _SampleViewState extends State<SampleView> {
                   child: Icon(Icons.people)),
             ],
           ),
+          AnimatedButtonBar(
+            controller: _controller,
+            radius: 32.0,
+            padding: const EdgeInsets.all(16.0),
+            backgroundColor: Colors.blueGrey.shade800,
+            foregroundColor: Colors.blueGrey.shade300,
+            elevation: 24,
+            borderColor: Colors.white,
+            borderWidth: 2,
+            innerVerticalPadding: 16,
+            children: [
+              ButtonBarEntry(
+                  onTap: () => print('First item tapped'),
+                  child: Icon(Icons.sunny)),
+              ButtonBarEntry(
+                  onTap: () => print('Second item tapped'),
+                  child: Icon(Icons.nightlight_round)),
+            ],
+          ),
+          ElevatedButton(
+              onPressed: () {
+                _controller.setIndex(_controller.index == 0 ? 1 : 0);
+              },
+              child: Text('Set index'))
         ],
       ),
     );
