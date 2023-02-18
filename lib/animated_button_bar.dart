@@ -59,7 +59,7 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
   @override
   Widget build(BuildContext context) {
     Color backgroundColor =
-        widget.backgroundColor ?? Theme.of(context).backgroundColor;
+        widget.backgroundColor ?? Theme.of(context).colorScheme.background;
     return ChangeNotifierProvider(
       create: (context) => _controller,
       child: Consumer<AnimatedButtonController>(
@@ -92,7 +92,7 @@ class _AnimatedButtonBarState extends State<AnimatedButtonBar> {
                       child: Container(
                         decoration: BoxDecoration(
                           color:
-                              widget.foregroundColor ?? Theme.of(context).accentColor,
+                              widget.foregroundColor ?? Theme.of(context).colorScheme.secondary,
                           borderRadius:
                               BorderRadius.all(Radius.circular(widget.radius)),
                         ),
