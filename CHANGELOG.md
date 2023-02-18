@@ -1,3 +1,7 @@
+## [1.0.0] - 2023-02-18
+
+* Added AnimatedButtonController to set index programmatically
+
 ## [0.0.2+1] - 2021-04-06
 
 * Dart code formatting
